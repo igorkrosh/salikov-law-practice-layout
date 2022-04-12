@@ -9,11 +9,26 @@ html(lang="ru")
         title Document
         include pug/head.pug
     body
-        .container
-            h1 Hi from PUG! 
-            +InputRadio('name', 'test')
-            
-            +Modal('test', 'ModalTemplate')
-            button(modal="test") Modal Test
+        header 
+            .container 
+                a(href="/" class="logo")
+                    img(src="/assets/images/logo.png", alt="")
+                .menu-wrapper 
+                    .left-block
+                        a(href="") Курсы 
+                        a(href="") Вебинары 
+                        a(href="") О подписке 
+                    .right-block 
+                        .search-block 
+                            input(type="text" placeholder="Поиск")
+                        a(href="/").btn-lk 
+                            span Личный кабинет
+        section.main-block 
+            .container
+                .text-block
+                    h1 Образовательная экосистема <br> для <span>юристов</span>
+                    p Уникальные видеолекции и онлайн-курсы от ведущих юристов. Учитесь новому и повышайте профессиональный уровень каждый день.
+                    button.btn Принять участие 
+                img(src="/assets/images/bg/banner.png", alt="").bg
 
         include pug/scripts.pug
