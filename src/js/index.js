@@ -102,17 +102,22 @@ function HideModal(modalId)
 
 function InitOwlCarousel()
 {
-    let popular = $('section.popular .btn-switch-wrapper .owl-carousel').owlCarousel({
-        items: 6,
-        autoWidth: true,
-        slideBy: 1,
-        loop:false,
-        dots: false,
-    })
+    document.fonts.ready.then(function () {
+        let popular = $('section.popular .btn-switch-wrapper .owl-carousel').owlCarousel({
+            items: 6,
+            autoWidth: true,
+            slideBy: 1,
+            loop:false,
+            dots: false,
+        })
 
-    $('section.popular .btn-switch-wrapper .next').on('click', function () {
-        popular.trigger('next.owl.carousel');
+        $('section.popular .btn-switch-wrapper .next').on('click', function () {
+            popular.trigger('next.owl.carousel');
+        })
     })
+    
+    
+   
 
     $('section.reviews .owl-carousel').owlCarousel({
         items: 4,
