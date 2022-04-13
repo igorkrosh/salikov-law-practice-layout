@@ -483,6 +483,13 @@ section.popular
         grid-gap: 17px;
         margin-top: 30px;
     }
+
+    .btn-more 
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
 }
 
 .course-card 
@@ -587,4 +594,48 @@ section.popular
     font-family: 'OpenSans';
     font-weight: 700;
 }
+
+section.sect-text 
+{
+    .container
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .left-block
+        {
+            width: 50%;
+
+            h2 
+            {
+                font-size: 43px;
+
+                b 
+                {
+                    color: #f2d3b7;
+                }
+            }
+        }
+
+        .right-block
+        {
+            width: 50%;
+
+            p:nth-child(1) 
+            {
+                font-size: 22px;
+            }
+
+            p:nth-child(2)
+            {
+                font-size: 18px;
+                color: #656565;
+            } 
+        }
+    }
+}
+
+
 @import 'responce';
