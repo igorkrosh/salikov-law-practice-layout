@@ -2,20 +2,22 @@ $(document).ready(Core);
 
 function Core()
 {
+    InitOwlCarousel();
+
     SetTabSwitcher();
     SetModal();
 }
 
 function SetTabSwitcher()
 {
-    $('.btn__tab__switch').on('click', function(e) {
+    $('.btn-tab-switch').on('click', function(e) {
         e.preventDefault();
         if ($(this).hasClass('active'))
         {
             return;
         }
 
-        $('.btn__tab__switch').removeClass('active');
+        $('.btn-tab-switch').closest('.btn-switch-wrapper').find('.btn-tab-switch').removeClass('active');
         $(this).addClass('active');
 
         let targetTab = $(this).attr('target');
@@ -27,16 +29,17 @@ function SetTabSwitcher()
 function SwitchTab(target)
 {
     
-    $('.tab.active').animate({
+    let tabViewer = $(`[tab-name="${target}"]`).closest('.tab-viewer');
+    $(tabViewer).find('.tab.active').animate({
         opacity: 0
     }, 500, function() {
-        $('.tab.active').removeClass('active');
+        $(tabViewer).find('.tab.active').removeClass('active');
 
         $(`[tab-name="${target}"]`).css('opacity', 0);
         $(`[tab-name="${target}"]`).addClass('active');
         
         let tabHeight = $(`[tab-name="${target}"]`)[0].clientHeight;
-        $(`[tab-name="${target}"]`).closest('.tab__viewer').css('height', `${tabHeight}px`)
+        $(`[tab-name="${target}"]`).closest('.tab-viewer').css('height', `${tabHeight}px`)
 
         $(`[tab-name="${target}"]`).animate({
             opacity: 1
@@ -95,4 +98,21 @@ function HideModal(modalId)
         $(modalId + ' .modal__dialog').removeClass('fadeOutDownBig');
         $('.modal__backdrop').remove();
     });
+}
+
+function InitOwlCarousel()
+{
+    
+    let popular = $('section.popular .btn-switch-wrapper .owl-carousel').owlCarousel({
+        items: 6,
+        autoWidth: true,
+        slideBy: 1,
+        loop:false,
+        dots: false,
+    })
+
+    $('section.popular .btn-switch-wrapper .next').on('click', function () {
+        popular.trigger('next.owl.carousel');
+    })
+    
 }

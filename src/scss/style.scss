@@ -389,4 +389,202 @@ section.directions
     }
 }
 
+section.popular 
+{
+    .title:after
+    {
+        content: '';
+        width: 42px;
+        height: 41px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: url(/assets/images/icons/popular.png);
+    }
+    .btn-switch-wrapper
+    {
+        position: relative;
+        border-bottom: 1px solid #d5d5d5;
+
+        .owl-carousel
+        {
+            display: block;
+        }
+
+        .btn-tab-switch
+        {
+            font-size: 16px;
+            font-family: 'OpenSans';
+            font-weight: 800;
+            color: #8d8d8d;
+            border: none;
+            background: none;
+            padding-bottom: 20px;
+            padding-left: 0;
+            padding-top: 5px;
+            margin-right: 15px;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .btn-tab-switch:after 
+        {
+            content: '';
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s;
+        }
+
+        .btn-tab-switch.active, .btn-tab-switch:hover 
+        {
+            color: #354c55;
+        }
+
+        .btn-tab-switch.active:after, .btn-tab-switch:hover:after
+        {
+            background: #f2d3b7;
+        }
+
+        .next 
+        {
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: url(/assets/images/icons/right.png);
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 5;
+        }
+    }
+
+    .btn-switch-wrapper:after 
+    {
+        content: '';
+        height: 100%;
+        width: 25%;
+        right: 0;
+        top: 0;
+        position: absolute;
+        background: linear-gradient(280deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 96%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .course-wrapper
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 280px);
+        grid-gap: 17px;
+        margin-top: 30px;
+    }
+}
+
+.course-card 
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+
+    .img 
+    {
+        width: 100%;
+        height: 215px;
+        position: relative;
+        padding: 15px;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+
+        img 
+        {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: 0.5s;
+        }
+        span 
+        {
+            color: #fff;
+            font-weight: 700;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    .img:after 
+    {
+        content: '';
+        width: 100%;
+        height: 30%;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 80%);
+        z-index: 5;
+        position: absolute;
+    }
+
+    .desc 
+    {
+        padding: 25px 20px;
+        display: flex;
+        flex-direction: column;
+
+        .name 
+        {
+            color: #354c55;
+            font-weight: 800;
+        }
+
+        .lectors 
+        {
+            font-size: 13px;
+            color: #949494;
+            margin: 15px 0;
+        }
+
+        .btn-wrapper 
+        {
+            display: flex;
+
+            button 
+            {
+                font-size: 13px;
+                padding-left: 25px;
+                padding-right: 25px;
+                height: 30px;
+                min-width: auto;
+            }
+
+            .btn 
+            {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.course-card:hover .img img 
+{
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.tag 
+{
+    border-radius: 10px;
+    color: #fff;
+    background: #80a6b4;
+    border: none;
+    font-family: 'OpenSans';
+    font-weight: 700;
+}
 @import 'responce';

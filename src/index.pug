@@ -58,5 +58,63 @@ html(lang="ru")
                         .bg
                         span И ещё 18 <br> направлений
                         button.btn Перейти 
+        section.popular
+            .container 
+                h2.title Популярное
+                .btn-switch-wrapper
+                    .owl-carousel
+                        .item
+                            button.btn-tab-switch.active(target="pop-1") Банкротство и СО 
+                        .item
+                            button.btn-tab-switch(target="pop-2") Корпоративное право
+                        .item
+                            button.btn-tab-switch(target="pop-3") Поэтажная собственность
+                        .item
+                            button.btn-tab-switch(target="pop-4") Обязательственное право
+                        .item
+                            button.btn-tab-switch(target="pop-5") Вещное право
+                        .item
+                            button.btn-tab-switch(target="pop-6") Юридический английский
+                        .item
+                            button.btn-tab-switch(target="pop-7") Coronapravo     
+                        .item
+                            button.btn-tab-switch(target="pop-8") Общие вопросы
+                        .item
+                            button.btn-tab-switch(target="pop-9") test 1
+                        .item
+                            button.btn-tab-switch(target="pop-10") test 2
+                    button.next
+                .tab-viewer 
+                    .tab(tab-name="pop-1").active
+                        .course-wrapper 
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                    .tab(tab-name="pop-2")
+                        |tab 2
+                    .tab(tab-name="pop-3")
+                        |tab 3
+                    .tab(tab-name="pop-4")
+                        |tab 4
+                    .tab(tab-name="pop-5")
+                        |tab 5
+                    .tab(tab-name="pop-6")
+                        |tab 6
+                    .tab(tab-name="pop-7")
+                        |tab 7
+                    .tab(tab-name="pop-8")
+                        |tab 8
+                    .tab(tab-name="pop-9")
+                        |tab 9
+                    .tab(tab-name="pop-10")
+                        |tab 10
+
+                
+
 
         include pug/scripts.pug

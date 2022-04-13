@@ -16,3 +16,15 @@ mixin InputRadio(name, label)
 mixin BtnMenu()
     button.btn__menu
         span
+
+mixin CourseCard()
+    .course-card
+        .img
+            img(src="/assets/images/courses/1.jpg", alt="")
+            span 07.04.2022 / 2 недели
+        .desc
+            span.name Охрана исключительных прав IT-компаний: программное обеспечение и товарные знаки
+            span.lectors Иванов А.А.
+            .btn-wrapper 
+                button.btn Перейти
+                button.tag Курс
