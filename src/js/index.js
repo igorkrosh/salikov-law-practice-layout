@@ -102,7 +102,6 @@ function HideModal(modalId)
 
 function InitOwlCarousel()
 {
-    
     let popular = $('section.popular .btn-switch-wrapper .owl-carousel').owlCarousel({
         items: 6,
         autoWidth: true,
@@ -113,6 +112,15 @@ function InitOwlCarousel()
 
     $('section.popular .btn-switch-wrapper .next').on('click', function () {
         popular.trigger('next.owl.carousel');
+    })
+
+    $('section.reviews .owl-carousel').owlCarousel({
+        items: 4,
+        slideBy: 4,
+        nav: true,
+        navContainer: $('section.reviews .owl-navs .nav'),
+        dots: true,
+        dotsContainer: $('section.reviews .owl-navs .dots'),
     })
     
 }
