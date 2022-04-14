@@ -47,6 +47,13 @@ button, a
     font-family: 'OpenSans';
     font-weight: 700;
     color: #354c55;
+    border: 2px solid #f2d3b7;
+    transition: 0.5s;
+}
+
+.btn:hover 
+{
+    background: white;
 }
 
 header 
@@ -145,43 +152,68 @@ header
                 top: 3px;
             }
 
-            .btn-lk 
-            {
-                min-width: 180px;
-                height: 100%;
-                display: flex;
-                border: 1px solid #dedede;
-                border-radius: 10px;
-                background: #fff;
-                padding-left: 38px;
-                color: #484065;
-                align-items: center;
-                justify-content: center;
-                font-size: 13px;
-                position: relative;
-                
-                span 
-                {
-                    display: flex;
-                    padding-bottom: 1px;
-                    border-bottom: 1px solid #928f9e;
-                }
-            }
-
-            .btn-lk:after 
-            {
-                content: '';
-                position: absolute;
-                left: 18px;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-                width: 22px;
-                height: 23px;
-                background: url(/assets/images/icons/lk.png)
-            }
+            
         }
     }
+
+    .menu-mobile
+    {
+        display: none;
+    }
+
+    .btn-lk 
+    {
+        min-width: 180px;
+        height: 100%;
+        display: flex;
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        background: #fff;
+        padding-left: 38px;
+        color: #484065;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        position: relative;
+        transition: 0.5s;
+        
+        span 
+        {
+            display: flex;
+            padding-bottom: 1px;
+            border-bottom: 1px solid #928f9e;
+        }
+    }
+
+    .btn-lk:after 
+    {
+        content: '';
+        position: absolute;
+        left: 18px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 22px;
+        height: 23px;
+        background: url(/assets/images/icons/lk.png)
+    }
+
+    .btn-lk:hover 
+    {
+        background: #484065;
+        color: #fff;
+        border-color: #928f9e;
+
+        span 
+        {
+            border-color: #fff;
+        }
+    }
+
+    .btn-lk:hover:after
+    {
+        filter: brightness(10);
+    } 
 }
 
 section 
@@ -518,6 +550,7 @@ section.popular
             top: 50%;
             transform: translate(-50%, -50%) scale(1);
             transition: 0.5s;
+            min-width: 100%;
         }
         span 
         {
@@ -767,6 +800,7 @@ section.reviews
                 transform: translate(-50%, -50%) scale(1);
                 z-index: -1;
                 width: auto;
+                min-width: 100%;
             }
         }
 

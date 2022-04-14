@@ -4,6 +4,50 @@
     {
         max-width: 1024px;
     }
+
+    section.directions .directions-wrapper
+    {
+        grid-template-columns: 430px 270px 270px;
+        grid-gap: 12px;
+    }
+
+    section.directions .directions-wrapper .item
+    {
+        padding: 30px;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(1) .bg
+    {
+        background-position: right 45px;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(4) .bg
+    {
+        background-position: 172px 57px;
+    }
+
+    section.popular .course-wrapper
+    {
+        grid-template-columns: repeat(3, 320px);
+    }
+
+    section.how-to .btn-tab-switch
+    {
+        font-size: 16px;
+    }
+
+    section.main-block .container
+    {
+        position: relative;
+
+        .bg 
+        {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
 }
 
 @media(max-width: 1024px)
@@ -11,6 +55,40 @@
     .container
     {
         max-width: 992px;
+    }
+
+    section.directions .directions-wrapper
+    {
+        grid-template-columns: repeat(3, 310px);
+        grid-gap: 15px;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(1) .bg
+    {
+        background-position: right 65px;
+        background-size: 70%;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(4) .bg
+    {
+        background-size: 80%;
+        background-position: 102px 77px;
+    }
+
+    section.popular .course-wrapper
+    {
+        grid-template-columns: repeat(3, 305px);
+        grid-gap: 21px;
+    }
+
+    section.how-to .btn-tab-switch
+    {
+        padding: 5px 20px;
+    }
+
+    section.how-to .right-block
+    {
+        padding: 0 50px;
     }
 }
 
@@ -20,6 +98,159 @@
     {
         max-width: 768px;
     }
+
+    header .menu-wrapper .left-block
+    {
+        display: none;
+    }
+
+    header .menu-wrapper .right-block .search-block
+    {
+        margin: 0;
+    }
+
+    header .menu-wrapper
+    {
+        width: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: auto;
+    }
+
+    section.main-block .container .bg
+    {
+        width: 60%;
+    }
+
+    section.directions .directions-wrapper
+    {
+        grid-template-columns: repeat(2, 360px);
+    }
+
+    section.directions .directions-wrapper .item:nth-child(6) .bg
+    {
+        background-position: center 85px;
+    }
+
+    section.popular .course-wrapper
+    {
+        grid-template-columns: repeat(2, 355px);
+        grid-gap: 27px;
+    }
+
+    section.sect-text .container .left-block h2
+    {
+        font-size: 36px;
+    }
+
+    section.sect-text .container .right-block p:nth-child(1)
+    {
+        font-size: 18px;
+    }
+
+    section.sect-text .container .right-block p:nth-child(2)
+    {
+        font-size: 16px;
+    }
+
+    section.how-to .btn-tab-switch
+    {
+        padding: 5px 20px;
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    section.how-to .btn-switch-wrapper
+    {
+        text-align: center;
+    }
+
+    section.how-to .wrapper
+    {
+        flex-direction: column;
+    }
+
+    section.how-to .left-block, section.how-to .right-block
+    {
+        width: 100%;
+    }
+
+    section.how-to .right-block
+    {
+        margin-top: 20px;
+    }
+
+    section.help-form form.help
+    {
+        width: 100%;
+    }
+
+    form.help .wrapper .btn
+    {
+        margin-top: 20px;
+    }
+
+    .btn__menu
+    {
+        display: block;
+        margin-left: 15px;
+        background: #80a6b4;
+        border-radius: 10px;
+    }
+
+    .btn__menu span, .btn__menu:after, .btn__menu:before
+    {
+        background: #fff;
+    }
+
+    header .menu-mobile.active 
+    {
+        left: 0;
+    }
+
+    header .btn-lk
+    {
+        display: none;
+    }
+
+    header .menu-mobile
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        flex-direction: column;
+        padding: 50px;
+        background: rgba(128, 166, 180, 0.8);
+        height: 100%;
+        width: 400px;
+        z-index: 15;
+        transition: 0.5s;
+        left: -100vw;
+
+        .btn-lk 
+        {
+            height: 45px;
+            display: flex;
+        }
+
+        .menu 
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+
+            a 
+            {
+                margin-bottom: 15px;
+            }
+        }
+    }
 }
 
 @media(max-width: 768px)
@@ -28,6 +259,105 @@
     {
         max-width: 576px;
     }
+
+    section.directions .directions-wrapper
+    {
+        grid-template-columns: 100%;
+    }
+
+    section.directions .directions-wrapper .item
+    {
+        align-items: flex-start;
+    }
+
+    section.directions .directions-wrapper .item span
+    {
+        text-align: left;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(1) .bg
+    {
+        background-position: right 0px;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(4) .bg
+    {
+        background-position: 102px 40px;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(5) .bg
+    {
+        background-size: 55%;
+        background-position: 220px 60px;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(6) .bg
+    {
+        background-size: 55%;
+        background-position: 220px 60px;
+    }
+
+    section.main-block .container .bg
+    {
+        position: initial;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    section.main-block .container
+    {
+        flex-direction: column;
+    }
+
+    section.popular .course-wrapper
+    {
+        grid-template-columns: 100%;
+    }
+
+    section.sect-text .container
+    {
+        flex-direction: column;
+    }
+
+    section.sect-text .container .left-block, section.sect-text .container .right-block
+    {
+        width: 100%;
+    }
+
+    form.help .wrapper
+    {
+        flex-direction: column;
+
+        input 
+        {
+            margin-bottom: 10px;
+        }
+    }
+
+    .title
+    {
+        font-size: 28px;
+    }
+
+    footer .row
+    {
+        flex-direction: column;
+    }
+
+    footer .row .col.soc
+    {
+        margin: 30px auto;
+    }
+
+    section.main-block .container .text-block
+    {
+        width: 100%;
+    }
+
+    section.main-block .container .text-block h1
+    {
+        font-size: 44px;
+    }
 }
 
 @media(max-width: 576px)
@@ -35,5 +365,116 @@
     .container
     {
         max-width: 100%;
+    }
+
+    section.main-block .container .text-block h1
+    {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .logo 
+    {
+        overflow: hidden;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        background: #fff;
+        border-radius: 5px;
+    }
+
+    .title
+    {
+        font-size: 24px;
+    }
+
+    header
+    {
+        position: relative;
+        z-index: 20;
+    }
+
+    header .menu-mobile
+    {
+        width: 100%;
+        z-index: -1;
+        background: rgba(59, 76, 82, 0.8);
+    }
+
+    header .menu-mobile .menu a
+    {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(1) .bg
+    {
+        background-position: right 70px;
+        background-size: 80%;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(4) .bg
+    {
+        background-position: 62px 90px;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(5) .bg
+    {
+        background-size: 80%;
+        background-position: center 90px;
+    }
+
+    section.directions .directions-wrapper .item:nth-child(6) .bg
+    {
+        background-size: 80%;
+        background-position: center 90px;
+    }
+
+    section.sect-text .container .left-block h2
+    {
+        font-size: 30px;
+    }
+
+    section.how-to .right-block
+    {
+        padding: 0;
+    }
+
+    section.help-form form.help
+    {
+        padding: 25px;
+    }
+
+    form.help h2
+    {
+        font-size: 23px;
+    }
+
+    form.help p
+    {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    footer .row .col
+    {
+        width: 100%;
+    }
+
+    footer .row .col.right
+    {
+        align-items: flex-start;
+    }
+
+    footer .second-block .container
+    {
+        flex-direction: column;
+
+        .salut 
+        {
+            margin-top: 15px;
+        }
     }
 }

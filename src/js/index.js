@@ -6,6 +6,7 @@ function Core()
 
     SetTabSwitcher();
     SetModal();
+    SetMobileMenu();
 }
 
 function SetTabSwitcher()
@@ -115,9 +116,6 @@ function InitOwlCarousel()
             popular.trigger('next.owl.carousel');
         })
     })
-    
-    
-   
 
     $('section.reviews .owl-carousel').owlCarousel({
         items: 4,
@@ -126,6 +124,41 @@ function InitOwlCarousel()
         navContainer: $('section.reviews .owl-navs .nav'),
         dots: true,
         dotsContainer: $('section.reviews .owl-navs .dots'),
+        responsive: {
+            1200: {
+                items: 4,
+                slideBy: 4,
+            },
+            992: {
+                items: 3,
+                slideBy: 3,
+            },
+            768: {
+                items: 2,
+                slideBy: 2,
+            },
+            0: {
+                items: 1,
+                slideBy: 1
+            }
+        }
+    })    
+}
+
+function SetMobileMenu()
+{
+    $('.btn__menu').on('click', function () {
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('header .menu-mobile').removeClass('active');
+            $('body').removeClass('lock')
+        }
+        else 
+        {
+            $(this).addClass('active');
+            $('header .menu-mobile').addClass('active');
+            $('body').addClass('lock')
+        }
     })
-    
 }

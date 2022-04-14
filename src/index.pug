@@ -23,6 +23,15 @@ html(lang="ru")
                             input(type="text" placeholder="Поиск")
                         a(href="/").btn-lk 
                             span Личный кабинет
+                .menu-mobile 
+                    .menu 
+                        a(href="") Курсы 
+                        a(href="") Вебинары 
+                        a(href="") О подписке 
+                    a(href="/").btn-lk 
+                            span Личный кабинет
+                +BtnMenu()
+                    
         section.main-block 
             .container
                 .text-block
