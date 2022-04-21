@@ -1,0 +1,213 @@
+include pug/mixins.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body 
+        section.lk
+            .container 
+                .side 
+                    .navbar
+                        .col.first
+                            a(href="/" class="logo")
+                                img(src="/assets/images/logo.png", alt="")
+                        .col.second
+                            h1 Мое обучение 
+                            .search-block 
+                                input(type="text" placeholder="Поиск")
+                    .col.first
+                        .menu
+                            a(href="").btn-menu.active 
+                                .icon 
+                                    img(src="/assets/images/icons/menu/1.png", alt="")
+                                |Моё обучение
+                            a(href="").btn-menu
+                                .icon
+                                    img(src="/assets/images/icons/menu/2.png", alt="")
+                                |События 
+                            a(href="").btn-menu
+                                .icon
+                                    img(src="/assets/images/icons/menu/3.png", alt="")
+                                |Обратная связь
+                            a(href="").btn-menu
+                                .icon 
+                                    img(src="/assets/images/icons/menu/4.png", alt="")
+                                |Курсы
+                            a(href="").btn-menu
+                                .icon 
+                                    img(src="/assets/images/icons/menu/5.png", alt="")
+                                |Вебинары
+                            a(href="").btn-menu
+                                .icon
+                                    img(src="/assets/images/icons/menu/6.png", alt="")
+                                |Реферальная программа
+                            a(href="").btn-menu
+                                .icon 
+                                    img(src="/assets/images/icons/menu/7.png", alt="")
+                                |Мои сертификаты 
+                            a(href="").btn-menu
+                                .icon
+                                    img(src="/assets/images/icons/menu/8.png", alt="")
+                                |Пройденые курсы
+                            .support 
+                                a(href="").btn-menu
+                                    .icon
+                                        img(src="/assets/images/icons/menu/8.png", alt="")
+                                    |Поддержка
+                    .col.second
+                        .progress-wrapper.block
+                            h2 Прогресс:
+                            a(href="").item 
+                                .img 
+                                    img(src="/assets/images/courses/1.jpg", alt="")
+                                .desc 
+                                    .item-title Охрана исключительных прав IT-компаний: программное обеспечение и товарные знаки
+                                    .name Иванов А.А.
+                                    .wrapper 
+                                        span.tag Курс 
+                                        .progress 
+                                            span 28%
+                                            .bg 
+                            a(href="").item 
+                                .img 
+                                    img(src="/assets/images/courses/1.jpg", alt="")
+                                .desc 
+                                    .item-title Охрана исключительных прав IT-компаний: программное обеспечение и товарные знаки
+                                    .name Иванов А.А.
+                                    .wrapper 
+                                        span.tag Курс 
+                                        .progress 
+                                            span 28%
+                                            .bg 
+                        .webinar.block 
+                            h2 Предстоящие вебинары
+                            .webinar-wrapper 
+                                .item 
+                                    .icon.course 
+                                    .desc 
+                                        .item-title Обращение взыскания на интеллектуальную собственность: тренды
+                                        .wrapper
+                                            .date 20.04.2022 16:00
+                                            .name Спикеры: Саликов И.А.
+                                            .tag.course Вебинар в рамках курса
+                                .item 
+                                    .icon.free 
+                                    .desc 
+                                        .item-title Обращение взыскания на интеллектуальную собственность: тренды
+                                        .wrapper
+                                            .date 20.04.2022 16:00
+                                            .name Спикеры: Саликов И.А.
+                                            .tag Вебинар в рамках курса
+                        .results.block
+                            h2 Результаты:
+                            .results-wrapper 
+                                .item 
+                                    .icon.one
+                                    .desc 
+                                        .item-title Обращение взыскания на интеллектуальную собственность: тренды
+                                        .wrapper 
+                                            .name Иванов И.И 
+                                            .date 20.04.2022
+                                .item 
+                                    .icon.two
+                                    .desc 
+                                        .item-title Обращение взыскания на интеллектуальную собственность: тренды
+                                        .wrapper 
+                                            .name Иванов И.И 
+                                            .date 20.04.2022
+                                .item 
+                                    .icon.three
+                                    .desc 
+                                        .item-title Обращение взыскания на интеллектуальную собственность: тренды
+                                        .wrapper 
+                                            .name Иванов И.И 
+                                            .date 20.04.2022
+                                .item 
+                                    .icon.four
+                                    .desc 
+                                        .item-title Обращение взыскания на интеллектуальную собственность: тренды
+                                        .wrapper 
+                                            .name Иванов И.И 
+                                            .date 20.04.2022
+                                .item 
+                                    .icon.five
+                                    .desc 
+                                        .item-title Обращение взыскания на интеллектуальную собственность: тренды
+                                        .wrapper 
+                                            .name Иванов И.И 
+                                            .date 20.04.2022
+                        .recomendation.block
+                            h2 Рекомендации:
+                            .wrapper 
+                                +CourseCard()
+                                +CourseCard()
+                                +CourseCard()
+                            .btn-wrapper 
+                                button.btn Все курсы
+                            
+                .side 
+                    .user-info.block
+                        button.notification.active
+                        .user 
+                            button.btn-lk
+                                img(src="/assets/images/avatar.png", alt="").avatar
+                                span Иванов Иван Иванович
+                                .wrapper 
+                                    a(href="").btn-menu
+                                        .icon
+                                            img(src="/assets/images/icons/menu/8.png", alt="")
+                                        |Мой профиль  
+                                    a(href="").btn-menu
+                                        .icon
+                                            img(src="/assets/images/icons/menu/8.png", alt="")
+                                        |Редактировать 
+                                    a(href="").btn-menu
+                                        .icon
+                                            img(src="/assets/images/icons/menu/8.png", alt="")
+                                        |Выход 
+                            .score У вас: 35 757 баллов
+                    .calendar.block
+                        .title-row 
+                            span Апрель, 15 
+                            .btn-wrapper 
+                                button.prev
+                                button.next
+                        .numbers
+                            +Calendar()
+                    .journal.block 
+                        h2 Задания:
+                        .item-wrapper 
+                            .item
+                                .row
+                                    img(src="/assets/images/icons/achievements/1.png", alt="").icon
+                                    .wrapper 
+                                        .item-title Задание по курсу: Обращение взыскания на интеллектуальную собственность
+                                        .text Вычислите квадратный корень...
+                                .date Срок сдачи: 20.04.2022
+                            .item
+                                .row
+                                    img(src="/assets/images/icons/achievements/1.png", alt="").icon
+                                    .wrapper 
+                                        .item-title Задание по курсу: Обращение взыскания на интеллектуальную собственность
+                                        .text Вычислите квадратный корень...
+                                .date Срок сдачи: 20.04.2022
+                    .achievements.block 
+                        h2 Достижения:
+                        .item-wrapper 
+                            .item 
+                                img(src="/assets/images/icons/achievements/2.png", alt="").icon
+                                .wrapper 
+                                    .item-title Тяга к знаниям 
+                                    .text Начать первый курс обучения
+                            .item 
+                                img(src="/assets/images/icons/achievements/3.png", alt="").icon
+                                .wrapper 
+                                    .item-title Человек паук
+                                    .text Прохождение нескольких курсов одновременно
+
+

@@ -47,3 +47,21 @@ mixin Review()
             .name-wrapper 
                 span.name Иванов Иван Иванович
         p.text Последовательное изложение заявленной темы. Много исторических справок относительно развития представительства, которые помогают более структурно увидеть и понять названый институт, что в конечном итоге, приводит к его более правильному восприятию. Знания полученные на данном курсе, актуальны и в настоящее время.  
+
+mixin Calendar()
+    - let days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+    - let numbers = [28, 29, 30, 31]
+    - let numbers2 = [1, 2, 3, 4, 5, 6, 7, 8]
+    - let index = 0
+
+    for item in days
+        button=item
+    for item in numbers
+        button=item
+    - for (index = 1; index < 31; index++)
+        if (index == 15)
+            button.active=index
+        else
+            button.current=index
+    for item in numbers2
+        button=item
