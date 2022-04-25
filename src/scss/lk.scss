@@ -1096,6 +1096,14 @@ section.lk
     section.lk .calendar
     {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calendar .title-row
+    {
+        width: 100%;
     }
 
     section.lk .side:nth-child(2)
@@ -1134,5 +1142,28 @@ section.lk
     {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    section.lk .user-info.mobile
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        
+        .btn-lk 
+        {
+            padding: 0;
+        }
+
+        .wrapper 
+        {
+            width: 225px;
+
+            .btn-menu 
+            {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
     }
 }
