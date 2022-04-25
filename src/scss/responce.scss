@@ -477,4 +477,34 @@
             margin-top: 15px;
         }
     }
+
+    section.lk .menu .support
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.lk .user-info.mobile
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        
+        .btn-lk 
+        {
+            padding: 0;
+        }
+
+        .wrapper 
+        {
+            width: 225px;
+
+            .btn-menu 
+            {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+    }
 }
