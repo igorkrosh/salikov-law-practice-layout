@@ -850,6 +850,16 @@ section.lk
     }
 }
 
+section.lk .user-info.mobile
+{
+    display: none;
+}
+
+section.lk .support .notification
+{
+    display: none;
+}
+
 @media(max-width: 1450px)
 {
     section.lk .container
@@ -1165,5 +1175,10 @@ section.lk
                 font-size: 14px;
             }
         }
+    }
+
+    section.lk .support .notification
+    {
+        display: block;
     }
 }
