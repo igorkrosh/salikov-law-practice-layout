@@ -48,6 +48,22 @@
             z-index: -1;
         }
     }
+
+    section.courses-page .content-wrapper .tab-viewer .tab
+    {
+        grid-template-columns: repeat(3, 241px);
+    }
+
+    section.courses-page .content-wrapper .filter-wrapper fieldset .radio
+    {
+        font-size: 14px;
+    }
+
+    section.courses-page .content-wrapper .filter-wrapper form
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media(max-width: 1024px)
@@ -89,6 +105,21 @@
     section.how-to .right-block
     {
         padding: 0 50px;
+    }
+
+    section.courses-page .content-wrapper .tab-viewer .tab
+    {
+        grid-template-columns: repeat(2, 330px);
+    }
+
+    section.courses-page .content-wrapper .tab-viewer
+    {
+        width: 70%;
+    }
+
+    section.courses-page .content-wrapper .filter-wrapper
+    {
+        width: 26%;
     }
 }
 
@@ -251,6 +282,11 @@
             }
         }
     }
+
+    section.courses-page .content-wrapper .tab-viewer .tab
+    {
+        grid-template-columns: repeat(2, 253px);
+    }
 }
 
 @media(max-width: 768px)
@@ -357,6 +393,36 @@
     section.main-block .container .text-block h1
     {
         font-size: 44px;
+    }
+
+    section.courses-page .title br 
+    {
+        display: none;
+    }
+
+    section.courses-page .title
+    {
+        font-size: 40px;
+    }
+
+    section.courses-page .content-wrapper .tab-viewer
+    {
+        width: 100%;
+    }
+
+    section.courses-page .content-wrapper
+    {
+        flex-direction: column-reverse;
+    }
+
+    section.courses-page .content-wrapper .tab-viewer .tab
+    {
+        grid-template-columns: repeat(2, 268px);
+    }
+
+    section.courses-page .content-wrapper .filter-wrapper
+    {
+        width: 100%;
     }
 }
 
@@ -483,5 +549,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    section.courses-page .content-wrapper .tab-viewer .tab
+    {
+        grid-template-columns: 100%
+    }
+
+    section.courses-page .title
+    {
+        font-size: 30px;
     }
 }
