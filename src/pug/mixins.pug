@@ -13,6 +13,11 @@ mixin InputRadio(name, label)
         input(type="radio" name=name)
         span.checkmark
 
+mixin InputCheckbox(name, label)
+    label.radio= label
+        input(type="checkbox" name=name)
+        span.checkmark
+
 mixin BtnMenu()
     button.btn__menu
         span
@@ -65,3 +70,69 @@ mixin Calendar()
             button.current=index
     for item in numbers2
         button=item
+
+mixin Header()
+    header 
+        .container 
+            a(href="/" class="logo")
+                img(src="/assets/images/logo.png", alt="")
+            .menu-wrapper 
+                .left-block
+                    a(href="") Курсы 
+                    a(href="") Вебинары 
+                    a(href="") О подписке 
+                .right-block 
+                    .search-block 
+                        input(type="text" placeholder="Поиск")
+                    a(href="/lk.html").btn-lk 
+                        span Личный кабинет
+            .menu-mobile 
+                .menu 
+                    a(href="") Курсы 
+                    a(href="") Вебинары 
+                    a(href="") О подписке 
+                a(href="/").btn-lk 
+                        span Личный кабинет
+            +BtnMenu()
+
+mixin Footer()
+    section.help-form 
+        .container 
+            form(action="").help
+                h2 Поможем в выборе
+                p Если у вас есть вопросы о формате или вы не знаете, что выбрать, оставьте свой номер: мы позвоним, чтобы ответить на все ваши вопросы.
+                .wrapper
+                    input(type="text" placeholder="Ваше  имя")
+                    input(type="text" placeholder="+7 (___) ___-__-__")
+                    button.btn Отправить
+    footer
+        .first-block 
+            .container 
+                .row
+                    .col
+                        a(href="").bold Главная   
+                        a(href="").bold Вебинары  
+                        a(href="").bold О подписке  
+                        a(href="").bold Корпоративным клиентам  
+                    .col.soc 
+                        span Подписывайтесь!
+                        .icons-wrapper 
+                            a(href="").vk
+                                img(src="assets/images/icons/vk.png", alt="")
+                            a(href="").fb 
+                                img(src="assets/images/icons/fb.png", alt="")
+                            a(href="").inst 
+                                img(src="assets/images/icons/inst.png", alt="")
+                            a(href="").ok 
+                                img(src="assets/images/icons/ok.png", alt="")
+                    .col.right
+                        .wrapper 
+                            a(href="").bold Правовые вопросы
+                            a(href="") Политика конфиденциальности
+                            a(href="") Согласие на обработку данных
+                            a(href="") Пользовательское соглашение
+        .second-block
+            .container 
+                span © 2022 Copyright
+                span.salut Дизайн и разработка: <a href="https://salut-promo.ru/">SalutPromo</a>
+                

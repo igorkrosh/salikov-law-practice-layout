@@ -1,0 +1,76 @@
+include pug/mixins.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body
+        +Header()
+        section.breadscrumbs 
+            .container 
+                a(href="") Главная
+                span -
+                a(href="") Курсы 
+        section.courses-page 
+            .container 
+                h1.title Программы обучения <br> по всем направлениям
+                .btn-switch-wrapper
+                    button.btn-tab-switch.active(target="1") Все курсы
+                    button.btn-tab-switch(target="2") Банкротство и СО     
+                    button.btn-tab-switch(target="3") Корпоративное право
+                    button.btn-tab-switch(target="4") Поэтажная собственность
+                    button.btn-tab-switch(target="5") Обязательственное право
+                    button.btn-tab-switch(target="6") Вещное право
+                    button.btn-tab-switch(target="7") Юридический английский
+                    button.btn-tab-switch(target="8") Coronapravo
+                    button.btn-tab-switch(target="9") Общие вопросы
+                .content-wrapper 
+                    .tab-viewer
+                        .tab.active(tab-name="1")
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                            +CourseCard()
+                        .tab(tab-name="2")
+                            h2 2
+                        .tab(tab-name="3")
+                            h2 3
+                        .tab(tab-name="4")
+                            h2 4
+                        .tab(tab-name="5")
+                            h2 5
+                        .tab(tab-name="6")
+                            h2 2
+                        .tab(tab-name="7")
+                            h2 7
+                        .tab(tab-name="8")
+                            h2 8
+                        .tab(tab-name="9")
+                            h2 9
+                    .filter-wrapper 
+                        form 
+                            fieldset 
+                                h4 Вид обучения 
+                                +InputCheckbox('1', 'Курс (25)')
+                                +InputCheckbox('1', 'Запись курса (73)')
+                            fieldset 
+                                    h4 Стоимость
+                                    +InputCheckbox('1', 'Бесплатное (11)')
+                                    +InputCheckbox('1', 'Платное (36)')
+                            fieldset 
+                                    h4 Длительность
+                                    +InputCheckbox('1', 'Менее 3 дней (11)')
+                                    +InputCheckbox('1', 'Менее месяца (8)')
+                                    +InputCheckbox('1', 'Более месяца (5)')
+
+        
+                
+        +Footer()
+
+        include pug/scripts.pug

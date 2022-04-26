@@ -1137,7 +1137,134 @@ footer
         }
     }
 }
-/***LK***/
+
+section.breadscrumbs
+{
+    font-size: 13px;
+    color: #a4a4a4;
+    padding-top: 10px;
+    
+    span 
+    {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    a 
+    {
+        transition: 0.3s;
+    }
+
+    a:hover 
+    {
+        color: #80a6b4;
+    }
+}
+
+section.courses-page 
+{
+    .title 
+    {
+        font-size: 53px;
+        padding-left: 0;
+    }
+
+    .btn-switch-wrapper
+    {
+        button 
+        {
+            font-size: 16px;
+            font-family: 'OpenSans';
+            height: 40px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background: none;
+            border: 1px solid #dedede;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        button.active 
+        {
+            color: #fff;
+            background: #80a6b4;
+            border-color: #80a6b4;
+        }
+    }
+
+    .content-wrapper
+    {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: 25px;
+
+        .tab-viewer
+        {
+            width: 75%;
+
+            .tab 
+            {
+                display: grid;
+                grid-template-columns: repeat(3, 285px);
+                grid-auto-rows: auto;
+                grid-gap: 10px;
+            }
+        }
+
+        .filter-wrapper 
+        {
+            width: 21%;
+            margin-left: auto;
+            border-top: 1px solid #dedede;
+
+            fieldset 
+            {
+                border: none;
+                display: flex;
+                flex-direction: column;
+
+                .radio 
+                {
+                    margin-bottom: 10px;
+
+                    .checkmark
+                    {
+                        border-radius: 4px;
+                        background: none;
+                        border: 1px solid #dedede;
+                    }
+
+                    .checkmark:after 
+                    {
+                        border-radius: 0;
+                        width: 5px;
+                        height: 5px;
+                        background: #fff;
+                    }
+
+                    input:checked~.checkmark
+                    {
+                        background: #80a6b4;
+                        border-color: #80a6b4;
+                    }
+                }
+            }
+
+            form 
+            {
+                padding: 10px;
+                padding-top: 20px;
+            }
+
+            h4 
+            {
+                font-size: 16px;
+                margin-top: 0
+            }
+        }
+    }
+}
 
 @import 'lk';
 @import 'responce';
