@@ -109,23 +109,7 @@ html(lang="ru")
                 .right-block 
                     p Вас будут учить признанные эксперты из Microsoft, IBM, Mail.ru Group, Сбера, Яндекса, Ozon, МТС, Мегафон и других топовых компаний.
                     p Они поделятся своим бесценным опытом и знаниями, которые каждый день помогают им быть лучшими в своей работе, а их компаниям занимать лидирующие позиции на рынке.
-        section.how-to 
-            .container 
-                h2.title Как проходит обучение 
-                .btn-switch-wrapper
-                    button.btn-tab-switch.active(target="how-1") Курсы
-                    button.btn-tab-switch(target="how-2") Вебинары
-                    button.btn-tab-switch(target="how-3") Прохождение заданий и тестов
-                    button.btn-tab-switch(target="how-4") Получение оценок и достижений 
-                .tab-viewer 
-                    .tab.active(tab-name="how-1")
-                        +HowTab()
-                    .tab(tab-name="how-2")
-                        +HowTab()
-                    .tab(tab-name="how-3")
-                        +HowTab()
-                    .tab(tab-name="how-4")
-                        +HowTab()
+        +HowTo()
         section.reviews
             .container 
                 h2.title Отзывы

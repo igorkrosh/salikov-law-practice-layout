@@ -64,6 +64,76 @@
         padding-left: 0;
         padding-right: 0;
     }
+
+    section.speakers .photo-wrapper .item
+    {
+        width: 220px;
+        height: 220px;
+    }
+
+    section.speakers .quote
+    {
+        width: 650px;
+    }
+
+    section.speakers .quote .arrow
+    {
+        border-left: 110px solid transparent;
+        border-right: 110px solid transparent;
+    }
+
+    section.speakers .quote .arrow-wrapper
+    {
+        width: 220px;
+    }
+
+    section.speakers .quote .shodow.left
+    {
+        transform: translateX(-100%) rotate(-11deg);
+    }
+
+    section.speakers .quote .shodow.right
+    {
+        transform: translateX(100%) rotate(11deg);
+    }
+
+    section.after-text .wrapper .item
+    {
+        width: 315px;
+    }
+
+    section.tariffs .wrapper .item
+    {
+        width: 370px;
+        margin: 20px;
+    }
+
+    section.tariffs .wrapper 
+    {
+        justify-content: center;
+    }
+
+    section.programs-details .text
+    {
+        padding-left: 0;
+    }
+
+    section.programs-details .inner-wrapper
+    {
+        flex-direction: column-reverse;
+    }
+
+    section.programs-details .date
+    {
+        width: auto;
+        margin-left: auto;
+    }
+
+    section.programs-details .text
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
 
 @media(max-width: 1024px)
@@ -287,6 +357,66 @@
     {
         grid-template-columns: repeat(2, 253px);
     }
+
+    section.course-title .item-wrapper
+    {
+        flex-wrap: wrap;
+
+        .item 
+        {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+    }
+
+    section.speakers .photo-wrapper .item
+    {
+        width: 170px;
+        height: 170px;
+    }
+
+    section.speakers .quote
+    {
+        width: 500px;
+    }
+
+    section.speakers .quote .arrow
+    {
+        border-left: 85px solid transparent;
+        border-right: 85px solid transparent;
+    }
+
+    section.speakers .quote .arrow-wrapper
+    {
+        width: 170px;
+    }
+
+    section.speakers .quote .shodow.left
+    {
+        transform: translateX(-100%) rotate(-14deg);
+    }
+
+    section.speakers .quote .shodow.right
+    {
+        transform: translateX(100%) rotate(14deg);
+    }
+
+    section.after-text .wrapper
+    {
+
+        flex-wrap: wrap;
+    }
+
+    section.after-text .wrapper .item
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    section.tariffs .wrapper .item
+    {
+        width: 320px;
+    }
 }
 
 @media(max-width: 768px)
@@ -424,6 +554,81 @@
     {
         width: 100%;
     }
+
+    section.about-course .container
+    {
+        padding: 0 15px;
+    }
+
+    section.speakers .photo-wrapper
+    {
+        flex-wrap: wrap;
+    }
+
+    section.speakers .photo-wrapper .item.active
+    {
+        max-height: 1500px;
+    }
+
+    section.speakers .photo-wrapper .item:hover img
+    {
+        transform: scale(1);
+    }
+
+    section.speakers .photo-wrapper .item
+    {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+
+
+        img.background
+        {
+            position: initial;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    section.speakers .photo-wrapper .item .quote 
+    {
+        position: relative;
+        top: initial;
+        opacity: 1;
+        pointer-events: all;
+        width: 400px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    section.speakers .photo-wrapper .item:not(.active) .quote 
+    {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    section.speakers .quote-wrapper
+    {
+        display: none;
+    }
+
+    section.programs-details .text ul li
+    {
+        width: 100%;
+    }
+
+    section.tariffs .wrapper .item
+    {
+        width: 260px;
+        margin: 6px;
+    }
 }
 
 @media(max-width: 576px)
@@ -559,5 +764,80 @@
     section.courses-page .title
     {
         font-size: 30px;
+    }
+
+    section.course-title .wrapper
+    {
+        width: 100%;
+    }
+
+    section.course-title .container
+    {
+        padding-top: 90px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    section.course-title .title
+    {
+        font-size: 32px;
+    }
+
+    section.course-title p
+    {
+        font-size: 16px;
+    }
+
+    section.course-title .item-wrapper .item
+    {
+        width: 100%;
+    }
+
+    section.about-course p:first-of-type
+    {
+        font-size: 18px;
+    }
+
+    section.about-course p
+    {
+        font-size: 16px;
+    }
+
+    section.speakers .photo-wrapper .item img.background
+    {
+        width: 280px;
+        height: 280px;
+    }
+
+    section.speakers .photo-wrapper .item
+    {
+        max-height: 280px;
+    }
+
+    section.speakers .photo-wrapper .item .quote
+    {
+        width: 280px;
+        padding: 20px;
+    }
+
+    section.programs-details .text-wrapper
+    {
+        padding: 20px;
+    }
+
+    section.programs-details .dropdown button
+    {
+        font-size: 16px;
+    }
+
+    section.programs-details .date
+    {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    section.tariffs .wrapper .item
+    {
+        width: 100%;
     }
 }

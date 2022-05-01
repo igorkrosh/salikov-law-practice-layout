@@ -1,0 +1,290 @@
+include pug/mixins.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body
+        +Header()
+        section.breadscrumbs 
+            .container 
+                a(href="") Главная
+                span -
+                a(href="") Курсы 
+        section.course-title
+            img.background(src="/assets/images/bg/course-details.jpg", alt="")
+            .container 
+                .sale 
+                    img(src="/assets/images/icons/sale.png", alt="")
+                    span 
+                        b Скидка 40% 
+                        | до 14.04.2022
+                span.type Курс
+                .wrapper
+                    h1.title Юрист в сфере IT
+                    p Развитие технологий привело к увеличению числа IT-компаний на российском рынке, а значит, вырос и интерес к вопросам охраны прав на их основные активы – результаты интеллектуальной деятельности. 
+                    button.btn Принять участие 
+                .item-wrapper 
+                    .item 
+                        img.icon(src="/assets/images/icons/deadline.png")
+                        b Когда: 
+                        span 21 апреля - 21 декабря 
+                    .item 
+                        img.icon(src="/assets/images/icons/graduation-cap.png")
+                        b Формат обучения:
+                        span Вебинары, видеолекции, практические задания
+                    .item 
+                        img.icon(src="/assets/images/icons/price-tag.png")
+                        b Стоимость:
+                        span 95 000 руб.
+                    .item 
+                        img.icon(src="/assets/images/icons/people.png")
+                        b Осталось мест:
+                        span 23
+        section.about-course 
+            .container 
+                h2.title О курсе 
+                p В последнее время увеличилось число обращений IT-компаний к юридическим фирмам. Спрос на юристов вырос примерно на 50%. Это связано с тем, что многие IT-компании хотят привлечь юристов для оценки рисков, которые связаны с производством оборудования и структуризацией бизнеса, чтобы продолжить работать вне санкций.
+                p На курсе вы освоите правовые навыки, необходимые для работы с ПО, а также узнаете, как учесть все возможные риски при использовании софта в компании и госорганах. С помощью курса вы получите практический опыт, благодаря заданиям от экспертов и бизнес-играм.
+        section.speakers
+            .container 
+                h2.title Спикеры
+                .row
+                    .photo-wrapper
+                        .item
+                            img.background(src="/assets/images/speakers/1.jpg")
+                            .quote
+                                .arrow-wrapper
+                                    .arrow
+                                    .shodow.left
+                                    .shodow.right
+                                b Иванов Иван Иванович 
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam vitae dolorem earum facere natus nesciunt fugiat sit deserunt fuga, voluptatibus quidem cupiditate eligendi, nihil voluptatem doloribus perferendis! Cupiditate, quaerat.
+
+                        .item 
+                            img.background(src="/assets/images/speakers/1.jpg")
+                            .quote
+                                .arrow-wrapper
+                                    .arrow
+                                    .shodow.left
+                                    .shodow.right
+                                b Иванов Иван Иванович 2
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam vitae dolorem earum facere natus nesciunt fugiat sit deserunt fuga, voluptatibus quidem cupiditate eligendi, nihil voluptatem doloribus perferendis! Cupiditate, quaerat.
+
+                        .item 
+                            img.background(src="/assets/images/speakers/1.jpg")
+                            .quote
+                                .arrow-wrapper
+                                    .arrow
+                                    .shodow.left
+                                    .shodow.right
+                                b Иванов Иван Иванович 3
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam vitae dolorem earum facere natus nesciunt fugiat sit deserunt fuga, voluptatibus quidem cupiditate eligendi, nihil voluptatem doloribus perferendis! Cupiditate, quaerat.
+
+                        .item 
+                            img.background(src="/assets/images/speakers/1.jpg")
+                            .quote
+                                .arrow-wrapper
+                                    .arrow
+                                    .shodow.left
+                                    .shodow.right
+                                b Иванов Иван Иванович 4
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam vitae dolorem earum facere natus nesciunt fugiat sit deserunt fuga, voluptatibus quidem cupiditate eligendi, nihil voluptatem doloribus perferendis! Cupiditate, quaerat.
+
+                    .quote-wrapper 
+                .row
+                    .photo-wrapper 
+                        .item 
+                            img.background(src="/assets/images/speakers/1.jpg")
+                            .quote
+                                .arrow-wrapper
+                                    .arrow
+                                    .shodow.left
+                                    .shodow.right
+                                b Иванов Иван Иванович 5
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam vitae dolorem earum facere natus nesciunt fugiat sit deserunt fuga, voluptatibus quidem cupiditate eligendi, nihil voluptatem doloribus perferendis! Cupiditate, quaerat.
+
+                        .item 
+                            img.background(src="/assets/images/speakers/1.jpg")
+                            .quote
+                                .arrow-wrapper
+                                    .arrow
+                                    .shodow.left
+                                    .shodow.right
+                                b Иванов Иван Иванович 6
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam vitae dolorem earum facere natus nesciunt fugiat sit deserunt fuga, voluptatibus quidem cupiditate eligendi, nihil voluptatem doloribus perferendis! Cupiditate, quaerat.
+
+                        .item 
+                            img.background(src="/assets/images/speakers/1.jpg")
+                            .quote
+                                .arrow-wrapper
+                                    .arrow
+                                    .shodow.left
+                                    .shodow.right
+                                b Иванов Иван Иванович 7
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam vitae dolorem earum facere natus nesciunt fugiat sit deserunt fuga, voluptatibus quidem cupiditate eligendi, nihil voluptatem doloribus perferendis! Cupiditate, quaerat.
+
+                        .item 
+                            img.background(src="/assets/images/speakers/1.jpg")
+                            .quote
+                                .arrow-wrapper
+                                    .arrow
+                                    .shodow.left
+                                    .shodow.right
+                                b Иванов Иван Иванович 8
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam vitae dolorem earum facere natus nesciunt fugiat sit deserunt fuga, voluptatibus quidem cupiditate eligendi, nihil voluptatem doloribus perferendis! Cupiditate, quaerat.
+                    .quote-wrapper
+        section.programs-details 
+            .container 
+                h2 Программа курса 
+                .text-wrapper
+                    .dropdown  
+                        button
+                            b Модуль 1. 
+                            span Технологические основы 
+                        .outer-wrapper 
+                            .inner-wrapper 
+                                .text
+                                    p Введение в разработку программного обеспечения
+                                    p Различные подходы ведения разработки ПО и отличие внутренней разработки от заказной
+                                    p Отличия разработки ПО от разработки моделей (машинное обучение ИИ)
+                                    p Результаты разработки ПО, нюансы
+                                    p Ограничения ответственности за результаты обеспечения
+                                    ul 
+                                        li Python. Знакомство с консолью
+                                        li Введение в типы данных и циклы
+                                        li Условные конструкции. Операции сравнения
+                                        li Циклы. Типы данных. Коллекции данных
+                                .date 
+                                    span 12 часов теории
+                                    span 54 часа практики
+                    +Dropdown('Модуль 2. ', 'Правовой режим компьютерной программы')
+                    +Dropdown('Модуль 3. ', 'Монетизация компьютерных программ. Успешное управление правами на ПО')
+                    +Dropdown('Модуль 4. ', 'Создание программы. Правовые и практические аспекты')
+                    +Dropdown('Модуль 5. ', 'Выбор юрисдикции')
+        +HowTo()
+        section.after-text 
+            .container 
+                h2.title После завершения обучения 
+                .wrapper 
+                    .item 
+                        b Как увеличить доход
+                        span С новыми знаниями и возможностями вы сможете повысить свой доход
+                    .item 
+                        b Развить карьеру
+                        span Вы сможете быстро получить повышение в должности
+                    .item 
+                        b Востребованность профессии
+                        span Вы получите возможность устроиться в крупнейшие IT-компании России и мира
+
+        section.tariffs 
+            .container 
+                h2.title Тарифы и варианты оплаты 
+                .wrapper 
+                    .item 
+                        .name 
+                            b Базовый
+                            span Доступ к одному модулю курса
+                            .price-wrapper
+                                .old-price 10 191 руб.
+                                .price 5 191 руб.
+                        .desc 
+                            .row 
+                                span Обратная связь преподавателя
+                                b Есть
+                            .row 
+                                span Доступ к курсу
+                                b 3 мес.
+                            .row 
+                                span Участие в вебинарах
+                                b 5 занятий
+                            .row 
+                                span Домашние задания
+                                b Есть
+                            .btn-wrapper
+                                button.btn Выбрать
+                    .item 
+                        .name 
+                            b Базовый
+                            span Доступ к одному модулю курса
+                            .price-wrapper
+                                .old-price 10 191 руб.
+                                .price 5 191 руб.
+                        .desc 
+                            .row 
+                                span Обратная связь преподавателя
+                                b Есть
+                            .row 
+                                span Доступ к курсу
+                                b 3 мес.
+                            .row 
+                                span Участие в вебинарах
+                                b 5 занятий
+                            .row 
+                                span Домашние задания
+                                b Есть
+                            .btn-wrapper
+                                button.btn Выбрать
+                    .item 
+                        .name 
+                            b Базовый
+                            span Доступ к одному модулю курса
+                            .price-wrapper
+                                .old-price 10 191 руб.
+                                .price 5 191 руб.
+                        .desc 
+                            .row 
+                                span Обратная связь преподавателя
+                                b Есть
+                            .row 
+                                span Доступ к курсу
+                                b 3 мес.
+                            .row 
+                                span Участие в вебинарах
+                                b 5 занятий
+                            .row 
+                                span Домашние задания
+                                b Есть
+                            .btn-wrapper
+                                button.btn Выбрать
+                    .item 
+                        .name 
+                            b Базовый
+                            span Доступ к одному модулю курса
+                            .price-wrapper
+                                .old-price 10 191 руб.
+                                .price 5 191 руб.
+                        .desc 
+                            .row 
+                                span Обратная связь преподавателя
+                                b Есть
+                            .row 
+                                span Доступ к курсу
+                                b 3 мес.
+                            .row 
+                                span Участие в вебинарах
+                                b 5 занятий
+                            .row 
+                                span Домашние задания
+                                b Есть
+                            .btn-wrapper
+                                button.btn Выбрать
+        section.tax 
+            .container 
+                h2.title Налоговый вычет, оплата для юр. лиц
+                p Мы создаём образовательные программы для корпоративных юристов, адвокатов, нотариусов, юристов консалтинговых компаний, юристов государственных организаций и учреждений.
+                p Мы создаём образовательные программы для корпоративных юристов, адвокатов, нотариусов, юристов консалтинговых компаний, юристов государственных организаций и учреждений.
+                ul 
+                    li - ведение переговоров
+                    li - заключение и исполнение договоров
+                    li - заключение и исполнение договоров
+                    li - soft skills
+                    li - и прочим
+
+        +Footer()
+
+        include pug/scripts.pug

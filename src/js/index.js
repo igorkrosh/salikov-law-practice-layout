@@ -7,6 +7,8 @@ function Core()
     SetTabSwitcher();
     SetModal();
     SetMobileMenu();
+    SetSpeakers();
+    SetDropdown();
 }
 
 function SetTabSwitcher()
@@ -29,11 +31,10 @@ function SetTabSwitcher()
 
 function SwitchTab(target)
 {
-    
     let tabViewer = $(`[tab-name="${target}"]`).closest('.tab-viewer');
-    $(tabViewer).find('.tab.active').animate({
+    $(tabViewer).find('.tab.active').stop().animate({
         opacity: 0
-    }, 500, function() {
+    }, 'slow', 'linear', function() {
         $(tabViewer).find('.tab.active').removeClass('active');
 
         $(`[tab-name="${target}"]`).css('opacity', 0);
@@ -42,9 +43,9 @@ function SwitchTab(target)
         let tabHeight = $(`[tab-name="${target}"]`)[0].clientHeight;
         $(`[tab-name="${target}"]`).closest('.tab-viewer').css('height', `${tabHeight}px`)
 
-        $(`[tab-name="${target}"]`).animate({
+        $(`[tab-name="${target}"]`).stop().animate({
             opacity: 1
-        }, 500)
+        }, 'slow', 'linear')
     })
 }
 
@@ -160,5 +161,46 @@ function SetMobileMenu()
             $('header .menu-mobile').addClass('active');
             $('body').addClass('lock')
         }
+    })
+}
+
+function SetSpeakers()
+{
+    $('section.speakers .photo-wrapper .item').on('click', function () {
+
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $(this).closest('.row').find('.quote-wrapper').css('height', `20px`);
+            
+            return;
+        }
+        else 
+        {
+            $('section.speakers .photo-wrapper .item').removeClass('active');
+            $(this).addClass('active');
+            $('section.speakers .quote-wrapper').css('height', `20px`);
+        }
+
+        
+        let height = $(this).find('.quote').innerHeight();
+        $(this).closest('.row').find('.quote-wrapper').css('height', `${height + 50}px`)
+    })
+}
+
+function SetDropdown()
+{
+    $('.dropdown button').on('click', function () {
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $(this).closest('.dropdown').find('.outer-wrapper').css('height', `0px`);
+            return;
+        }
+
+        $(this).addClass('active');
+        let height = $(this).closest('.dropdown').find('.inner-wrapper').outerHeight();
+        $(this).closest('.dropdown').find('.outer-wrapper').css('height', `${height}px`);
+
     })
 }

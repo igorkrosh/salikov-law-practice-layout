@@ -135,4 +135,44 @@ mixin Footer()
             .container 
                 span © 2022 Copyright
                 span.salut Дизайн и разработка: <a href="https://salut-promo.ru/">SalutPromo</a>
-                
+
+mixin Dropdown(b, span)
+    .dropdown  
+        button
+            b=b
+            span=span
+        .outer-wrapper 
+            .inner-wrapper 
+                .text
+                    p Введение в разработку программного обеспечения
+                    p Различные подходы ведения разработки ПО и отличие внутренней разработки от заказной
+                    p Отличия разработки ПО от разработки моделей (машинное обучение ИИ)
+                    p Результаты разработки ПО, нюансы
+                    p Ограничения ответственности за результаты обеспечения
+                    ul 
+                        li Python. Знакомство с консолью
+                        li Введение в типы данных и циклы
+                        li Условные конструкции. Операции сравнения
+                        li Циклы. Типы данных. Коллекции данных
+                .date 
+                    span 12 часов теории
+                    span 54 часа практики
+
+mixin HowTo()
+    section.how-to 
+        .container 
+            h2.title Как проходит обучение 
+            .btn-switch-wrapper
+                button.btn-tab-switch.active(target="how-1") Курсы
+                button.btn-tab-switch(target="how-2") Вебинары
+                button.btn-tab-switch(target="how-3") Прохождение заданий и тестов
+                button.btn-tab-switch(target="how-4") Получение оценок и достижений 
+            .tab-viewer 
+                .tab.active(tab-name="how-1")
+                    +HowTab()
+                .tab(tab-name="how-2")
+                    +HowTab()
+                .tab(tab-name="how-3")
+                    +HowTab()
+                .tab(tab-name="how-4")
+                    +HowTab()
